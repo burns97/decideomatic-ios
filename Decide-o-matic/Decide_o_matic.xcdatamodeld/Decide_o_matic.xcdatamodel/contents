@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3006" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Choice" representedClassName="Choice" syncable="YES">
+        <attribute name="choiceName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="partOf" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ChoiceList" inverseName="hasValues" inverseEntity="ChoiceList" syncable="YES"/>
+    </entity>
+    <entity name="ChoiceList" representedClassName="ChoiceList" syncable="YES">
+        <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasValues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Choice" inverseName="partOf" inverseEntity="Choice" syncable="YES"/>
+    </entity>
+    <entity name="Event">
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Choice" positionX="358" positionY="107" width="128" height="73"/>
+        <element name="ChoiceList" positionX="135" positionY="116" width="128" height="73"/>
+        <element name="Event" positionX="628" positionY="-100" width="128" height="73"/>
+    </elements>
+</model>
